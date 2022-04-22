@@ -1512,7 +1512,7 @@ void PandarGeneral_Internal::CalcPointXYZIT(Pandar40PPacket *pkt, int blockid,
     transformPoint(point.x, point.y, point.z);  
 
     point.intensity = unit.intensity;
-
+#if 0
     if ("realtime" == m_sTimestampType) {
       point.timestamp = m_dPktTimestamp;
     }
@@ -1530,7 +1530,7 @@ void PandarGeneral_Internal::CalcPointXYZIT(Pandar40PPacket *pkt, int blockid,
             laser40Offset_[i]) / 1000000.0f);
       }
     }
-
+#endif
     point.ring = i;
 
     if (pcl_type_) {
@@ -1568,7 +1568,7 @@ void PandarGeneral_Internal::CalcL64PointXYZIT(HS_LIDAR_L64_Packet *pkt, int blo
     transformPoint(point.x, point.y, point.z);  
 
     point.intensity = unit.intensity;
-
+#if 0
     if ("realtime" == m_sTimestampType) {
       point.timestamp = m_dPktTimestamp;
     }
@@ -1587,7 +1587,7 @@ void PandarGeneral_Internal::CalcL64PointXYZIT(HS_LIDAR_L64_Packet *pkt, int blo
             1000000.0f);
       }
     }
-
+#endif
     point.ring = i;
 
     if (pcl_type_) {
@@ -1625,7 +1625,7 @@ void PandarGeneral_Internal::CalcL20PointXYZIT(HS_LIDAR_L20_Packet *pkt, int blo
     transformPoint(point.x, point.y, point.z);  
 
     point.intensity = unit.intensity;
-
+#if 0
     if ("realtime" == m_sTimestampType) {
       point.timestamp = m_dPktTimestamp;
     }
@@ -1655,7 +1655,7 @@ void PandarGeneral_Internal::CalcL20PointXYZIT(HS_LIDAR_L20_Packet *pkt, int blo
         }
       }
     }
-
+#endif
     point.ring = i;
 
     if (pcl_type_) {
@@ -1753,7 +1753,7 @@ void PandarGeneral_Internal::CalcQTPointXYZIT(HS_LIDAR_QT_Packet *pkt, int block
     }
     transformPoint(point.x, point.y, point.z);  
     point.intensity = unit.intensity;
-
+#if 0
     if ("realtime" == m_sTimestampType) {
       point.timestamp = m_dPktTimestamp;
     }
@@ -1773,7 +1773,7 @@ void PandarGeneral_Internal::CalcQTPointXYZIT(HS_LIDAR_QT_Packet *pkt, int block
             1000000.0f);
       }
     }
-
+#endif 
     point.ring = i;
     if (pcl_type_)
       PointCloudList[i].push_back(point);
@@ -1828,7 +1828,7 @@ void PandarGeneral_Internal::CalcXTPointXYZIT(HS_LIDAR_XT_Packet *pkt, int block
     }
     transformPoint(point.x, point.y, point.z);  
     point.intensity = unit.intensity;
-
+#if 0
     if ("realtime" == m_sTimestampType) {
       point.timestamp = m_dPktTimestamp;
     }
@@ -1853,6 +1853,7 @@ void PandarGeneral_Internal::CalcXTPointXYZIT(HS_LIDAR_XT_Packet *pkt, int block
       }
     }
 
+#endif 
     point.ring = i;
     if (pcl_type_) {
       PointCloudList[i].push_back(point);

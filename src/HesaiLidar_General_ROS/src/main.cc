@@ -15,11 +15,12 @@ class HesaiLidarClient
 public:
   HesaiLidarClient(ros::NodeHandle node, ros::NodeHandle nh)
   {
-    lidarPublisher = node.advertise<sensor_msgs::PointCloud2>("/full_cloud_projected", 10);
+    //lidarPublisher = node.advertise<sensor_msgs::PointCloud2>("/full_cloud_projected", 10);
+    lidarPublisher = node.advertise<sensor_msgs::PointCloud2>("/velodyne_points",10);
     packetPublisher = node.advertise<hesai_lidar::PandarScan>("pandar_packets",10);
 
     string serverIp;
-    int lidarRecvPort;
+    int lidarRecvPort;  
     int gpsPort;
     double startAngle;
     string lidarCorrectionFile;  // Get local correction when getting from lidar failed

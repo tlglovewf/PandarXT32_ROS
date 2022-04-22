@@ -1,0 +1,6 @@
+N_SAN = 32  				//线束
+Horizon_SCAN = (360/0.18) = 2000	//一条线束点数
+ang_res_x = 0.18			//水平分辨率
+ang_res_y = 1.0				//垂直分辨率
+ang_bottom = 15+0.1			//起始方向与水平夹角(计算id)
+groundScanInd = 20			//地面线束id(认为地面的线)
